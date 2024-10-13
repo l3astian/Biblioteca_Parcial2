@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Agregar Pedido";
+}
+@model Biblioteca_Parcial2.Models.Pedidos
+
+<div class="container mt-5">
+    <h1 class="mb-4">Hacer un Pedido</h1>
+</div>
+
+
+<div class="card mb-4 mx-4">
+    <div class="card-body">
+        <form id="formularioOperacion" asp-action="CrearPedido" method="get">
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="Descripcion" placeholder="Ingrese el nombre del producto" asp-for="Descripcion" />
+            </div>
+            <div class="mb-3">
+                <label for="precioProducto" class="form-label">Fecha</label>
+                <input type="datetime" class="form-control" id="fechaPedido" placeholder="Ingresa la fecha del pedido " asp-for="FechaPedido" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" id="guardad">Guardar Pedido</button>
+            </div>
+        </form>
+    </div>
+</div>

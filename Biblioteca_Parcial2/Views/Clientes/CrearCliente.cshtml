@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Agregar Cliente";
+}
+@model Biblioteca_Parcial2.Models.Clientes
+
+<div class="container mt-5">
+    <h1 class="mb-4">Crear nuevo Cliente</h1>
+</div>
+
+<div class="card mb-4 mx-4">
+    <div class="card-body">
+        <form id="formularioOperacion" asp-action="CrearCliente" method="post">
+            <div class="mb-3">
+                <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+                <input type="text" class="form-control" id="nombreCliente" placeholder="Ingrese su nombre" asp-for="NombreCliente" />
+            </div>
+            <div class="mb-3">
+                <label for="CorreoElectronico" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="CorreoElectronico" placeholder="Ingrese su Correo Electrónico" asp-for="CorreoElectronico" />
+            </div>
+            <div class="mb-3">
+                <label for="Telefono" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="Telefono" placeholder="Ingrese su número de teléfono" asp-for="Telefono" />
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" id="guardarCliente">Guardar Cliente</button>
+            </div>
+        </form>
+    </div>
+</div>

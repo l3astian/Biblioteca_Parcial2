@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Clientes";
+}
+
+@model IEnumerable<Biblioteca_Parcial2.Models.Clientes >
+
+<div class="text-center" style="background-color: lightblue;">
+<h1>  Clientes  </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ClienteId</th>
+            <th scope="col">NombreCliente</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Telefono</th>
+        </tr>
+    </thead>
+    @foreach (var clientes in Model)
+    {
+        <tr>
+            <th scope="row">@clientes.ClienteId</th>
+            <td>@clientes.NombreCliente</td>
+            <td>@clientes.CorreoElectronico</td>
+            <td>@clientes.Telefono</td>
+        </tr>
+    }
+</table>
+    <a href="/Clientes/CrearCliente" class="btn btn-primary">Agregar Cliente</a>
+</div>
+
+<div class="text-center">
+    <img src="~/icon/clientes.jpg" width="200" height="200" />
+</div>
+
+
+
